@@ -4,19 +4,31 @@ import { X } from "lucide-react";
 import { login, register } from "../reducer/action";
 import { useDispatch } from "react-redux";
 import Swal from "sweetalert2";
+import { useRouter } from "next/navigation";
 
 export default function AuthModal({ isOpen, onClose }) {
   const [activeTab, setActiveTab] = useState("login");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
+  const router = useRouter();
 
   if (!isOpen) return null;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!email || !password) {
+    if (activeTab === "registro" && (!name || !email || !password)) {
+      await Swal.fire({
+        icon: "warning",
+        title: "Campos incompletos",
+        text: "Por favor completa todos los campos.",
+      });
+      return;
+    }
+
+    if (activeTab === "login" && (!email || !password)) {
       await Swal.fire({
         icon: "warning",
         title: "Campos incompletos",
@@ -27,19 +39,39 @@ export default function AuthModal({ isOpen, onClose }) {
 
     try {
       if (activeTab === "login") {
-        await dispatch(login(email, password));
-        onClose(); // cerrar modal después del login exitoso
+        const res = await dispatch(login(email, password)); // obtenemos { message, user }
+        const { user } = res;
+
+        // Verificamos que existe
+        if (!user) throw new Error("No se recibió el usuario desde el backend.");
+
+        // Guardamos en localStorage solo lo necesario
+        localStorage.setItem(
+          "user",
+          JSON.stringify({
+            email: user.email,
+            name: user.name,
+          })
+        );
+
+        await Swal.fire({
+          icon: "success",
+          title: "Login exitoso",
+          text: "Has iniciado sesión correctamente.",
+        });
+
+        onClose();
+        router.push("/dashboard");
       } else {
-        await dispatch(register(email, password));
+        const newUser = await dispatch(register(name, email, password));
         await Swal.fire({
           icon: "success",
           title: "Registro exitoso",
           text: "Usuario creado con éxito. Ahora puedes iniciar sesión.",
         });
-        setActiveTab("login"); // cambia a login después del alert
+        setActiveTab("login");
       }
     } catch (err) {
-          console.log("ERROR:", err); // <-- agrega esto
       const msg =
         err?.response?.data?.message ||
         err?.response?.data?.msg ||
@@ -55,7 +87,6 @@ export default function AuthModal({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
       <div className="bg-white rounded-lg w-full max-w-md shadow-lg p-6 relative">
-        {/* Botón de cerrar */}
         <button
           className="absolute top-4 right-4 text-gray-600 hover:text-gray-900"
           onClick={onClose}
@@ -63,12 +94,10 @@ export default function AuthModal({ isOpen, onClose }) {
           <X size={20} />
         </button>
 
-        {/* Logo */}
         <div className="flex justify-center mb-4">
           <img src="/logo.png" alt="Logo" className="h-20" />
         </div>
 
-        {/* Título */}
         <h2 className="text-center text-lg font-semibold text-gray-800 mb-1">
           Portal de Cliente
         </h2>
@@ -76,12 +105,9 @@ export default function AuthModal({ isOpen, onClose }) {
           Servicios y Cotizaciones
         </p>
 
-        {/* Tabs */}
         <div className="flex justify-center mb-4">
           <button
-            onClick={() => {
-              setActiveTab("login");
-            }}
+            onClick={() => setActiveTab("login")}
             className={`px-4 py-1 font-medium rounded-l-md ${
               activeTab === "login"
                 ? "bg-black text-white"
@@ -91,9 +117,7 @@ export default function AuthModal({ isOpen, onClose }) {
             Login
           </button>
           <button
-            onClick={() => {
-              setActiveTab("registro");
-            }}
+            onClick={() => setActiveTab("registro")}
             className={`px-4 py-1 font-medium rounded-r-md ${
               activeTab === "registro"
                 ? "bg-black text-white"
@@ -104,8 +128,20 @@ export default function AuthModal({ isOpen, onClose }) {
           </button>
         </div>
 
-        {/* Formulario */}
         <form onSubmit={handleSubmit}>
+          {activeTab === "registro" && (
+            <div className="mb-4">
+              <label className="block text-sm text-gray-700">Nombre</label>
+              <input
+                type="text"
+                placeholder="Tu nombre"
+                className="w-full mt-1 px-3 py-2 border rounded-md text-sm"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+          )}
+
           <div className="mb-4">
             <label className="block text-sm text-gray-700">Email</label>
             <input
@@ -116,6 +152,7 @@ export default function AuthModal({ isOpen, onClose }) {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
+
           <div className="mb-4">
             <label className="block text-sm text-gray-700">Password</label>
             <input

@@ -1,6 +1,6 @@
 import Clientes from "@/components/Clientes";
 import Excelencia from "@/components/Excelencia";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 import Landing from "@/components/Landing";
 import Navbar from "@/components/Navbar";
 import Numeros from "@/components/Numeros";

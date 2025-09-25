@@ -1,7 +1,7 @@
 import { LOGIN, REGISTER } from "./action.js";
 
 const initialState = {
-  user: [],
+  user: null,
 };
 
 function reducer(state = initialState, action) {
@@ -15,12 +15,13 @@ function reducer(state = initialState, action) {
     case REGISTER:
       return {
         ...state,
-        user: action.payload, // puedes guardar también como `newUser` si prefieres
+        user: action.payload,
       };
 
     default:
       return state;
   }
 }
+
 
 export default reducer;
