@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ReduxProvider from "../reducer/ReduxProvider";
 
 // Tipografías personalizadas
 const geistSans = Geist({
@@ -62,7 +63,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900 dark:bg-black dark:text-white`}
       >
+         <ReduxProvider>
         <main>{children}</main>
+        </ReduxProvider>
       </body>
     </html>
   );

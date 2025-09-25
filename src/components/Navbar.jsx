@@ -2,11 +2,14 @@
 import React, { useState } from "react";
 import { Button } from "@/ui/button";
 import { UserCircle, MessageCircle, Menu, X } from "lucide-react";
+import AuthModal from "./AuthModal.jsx";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+   const [modalOpen, setModalOpen] = useState(false);
 
   return (
+      <>
     <header className="bg-white/95 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-3 py-2 sm:py-2">
         <div className="flex items-center justify-between">
@@ -63,8 +66,8 @@ function Navbar() {
             <Button
               variant="outline"
               size="sm"
-              onClick={() => navigate("/auth?type=client")}
-              className="bg-gradient-to-r from-red-600 to-red-700 text-white border-0 hover:from-red-700 hover:to-red-800 shadow-lg"
+             onClick={() => setModalOpen(true)}
+              className="cursor-pointer  bg-gradient-to-r from-red-600 to-red-700 text-white border-0 hover:from-red-700 hover:to-red-800 shadow-lg"
             >
               <UserCircle className="mr-2 h-4 w-4" />
               <span>Registro/Acceso</span>
@@ -78,7 +81,7 @@ function Navbar() {
                   "_blank"
                 )
               }
-              className="shadow-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-700 hover:text-white"
+              className="cursor-pointer  shadow-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-700 hover:text-white"
             >
               <MessageCircle className="mr-2 h-4 w-4" />
               <span>WhatsApp</span>
@@ -119,7 +122,7 @@ function Navbar() {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => navigate("/auth?type=client")}
+               onClick={() => setModalOpen(true)}
                 className="bg-gradient-to-r from-red-600 to-red-700 text-white border-0 hover:from-red-700 hover:to-red-800 shadow"
               >
                 <UserCircle className="mr-2 h-4 w-4" />
@@ -144,6 +147,9 @@ function Navbar() {
         )}
       </div>
     </header>
+     {/* Modal de autenticación */}
+      <AuthModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+        </>
   );
 }
 
