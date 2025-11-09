@@ -162,10 +162,10 @@ export function PublicGallery() {
     <section id="galeria" className="py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             {gallery.title}
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-white text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             {gallery.subtitle}
           </p>
         </div>
@@ -210,7 +210,7 @@ export function PublicGallery() {
             </div>
 
             {sourcePhotos.length > 4 && (
-              <div className="text-center mt-8">
+              <div className="text-white text-center mt-8">
                 <Button
                   variant="outline"
                   size="lg"

@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ReduxProvider from "../reducer/ReduxProvider";
+import ReduxProvider from "../redux/ReduxProvider";
+
 
 // Tipografías personalizadas
 const geistSans = Geist({
@@ -26,11 +27,11 @@ export const metadata = {
     "servicio de sillas",
     "sillas oficina",
   ],
-  metadataBase: new URL("https://www.chairfix.com"), // Cambia a tu dominio real
+  metadataBase: new URL("https://www.chairfix.es"), // Cambia a tu dominio real
   openGraph: {
     title: "ChairFix - Reparación y Mantenimiento de Sillas",
     description: "Soluciones efectivas para todo tipo de sillas: oficina, comedor, escritorio y más.",
-    url: "https://www.chairfix.com",
+    url: "https://www.chairfix.es",
     siteName: "ChairFix",
     locale: "es_ES",
     type: "website",
@@ -58,7 +59,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        <link rel="canonical" href="https://www.chairfix.com" />
+        <link rel="canonical" href="https://www.chairfix.es" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900 dark:bg-black dark:text-white`}

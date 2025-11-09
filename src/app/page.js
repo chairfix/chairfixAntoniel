@@ -1,8 +1,10 @@
 import Clientes from "@/components/Clientes";
 import Excelencia from "@/components/Excelencia";
 import Footer from "@/components/Footer";
+import Gallery from "@/components/Gallery";
 import Landing from "@/components/Landing";
 import Navbar from "@/components/Navbar";
+
 import Numeros from "@/components/Numeros";
 import { PublicGallery } from "@/components/PublicGallery";
 import Servicios from "@/components/Servicios";
@@ -14,7 +16,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Landing />
-      <PublicGallery />
+      <Gallery />
       <Servicios />
       <Sobre />
       <Numeros />

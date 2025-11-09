@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { X } from "lucide-react";
-import { login, register } from "../reducer/action";
+// import { login, register } from "../reducer/action";
 import { useDispatch } from "react-redux";
 import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";

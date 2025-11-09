@@ -2,22 +2,30 @@
 import React from 'react'
 import { Button } from '../ui/button'
 import { Star } from 'lucide-react'
+import { useState } from "react"
+
+
 
 function Landing() {
+    const [modalOpen, setModalOpen] = useState(false);
   return (
     <section className="relative overflow-hidden">
+      <a href="https://api.whatsapp.com/send?phone=34685572880&text=Hola" target="_blank">
+          {/* <AiFillGithub className='gitHub'/> */}
+          <img src="/whatsapp.png" className="btnFlotante" />
+        </a>
         <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-accent/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Coluna da Esquerda - Texto Principal */}
             <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
               <div className="space-y-4 lg:space-y-6">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
+                <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
                   Reforma Profesional de{" "}
                   <span className="text-red-600">Sillas para Barberías</span>{" "}
                   y Salones de Belleza
                 </h1>
-                <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0">
+                <p className="text-white sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0">
                   Especializados en restaurar y reformar sillas de barbero y salón de belleza. 
                   Devolvemos la comodidad y elegancia que sus clientes merecen.
                 </p>
@@ -65,7 +73,11 @@ function Landing() {
             </div>
           </div>
         </div>
+ 
+ 
+ 
       </section>
+  
   )
 }
 

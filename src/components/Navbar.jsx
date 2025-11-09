@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Button } from "@/ui/button";
 import { UserCircle, MessageCircle, Menu, X } from "lucide-react";
 import AuthModal from "./AuthModal.jsx";
+import Modal from "./Modal.jsx";
+import Presupuesto from "./Presupuesto.jsx";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,6 +34,7 @@ function Navbar() {
               {menuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
+           
 
           {/* Navegación en escritorio */}
           <nav className="hidden lg:flex items-center space-x-6">
@@ -63,6 +66,8 @@ function Navbar() {
 
           {/* Botones */}
           <div className="hidden sm:flex items-center space-x-2">
+              {/* <Modal/>  
+              <Presupuesto/>   */}
             <Button
               variant="outline"
               size="sm"
@@ -119,6 +124,7 @@ function Navbar() {
               </a>
             </nav>
             <div className="flex flex-col sm:hidden space-y-2 mt-2">
+              <Modal/>  
               <Button
                 variant="outline"
                 size="sm"

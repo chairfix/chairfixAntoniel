@@ -7,11 +7,11 @@ function Trasnforma() {
   return (
     <section className="bg-gray-200/30 backdrop-blur-sm text-gray-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+        <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
           ¡Transforma tu sillón hoy mismo!
         </h2>
 
-        <p className="text-base sm:text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+        <p className="text-white sm:text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
           No dejes que las sillas rotas perjudiquen tu negocio. Contacta ahora y
           obtén un presupuesto gratuito.
         </p>
