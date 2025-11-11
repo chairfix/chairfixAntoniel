@@ -11,7 +11,7 @@ function Footer() {
           
           {/* Logo */}
           <div className="flex justify-center md:justify-start w-full md:w-auto">
-            <Image
+            <img
               src="/logoc.png"
               alt="Logo de la empresa"
               width={120}
