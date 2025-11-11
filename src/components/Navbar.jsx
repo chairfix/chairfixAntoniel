@@ -18,9 +18,9 @@ function Navbar() {
           {/* Logo */}
           <div className="relative w-[90px] h-16 flex items-center justify-center overflow-visible">
             <img
-              src="/favico.png"
+              src="/logo.png"
               alt="ChairFix Logo"
-              className="h-20 w-auto -mt-2"
+              className="h-26 w-auto -mt-2"
             />
           </div>
 

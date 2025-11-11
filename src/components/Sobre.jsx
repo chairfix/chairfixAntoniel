@@ -6,15 +6,15 @@ import { Award } from "lucide-react";
 
 function Sobre() {
   return (
-      <section id="sobre" className="py-20 bg-gray-50">
+      <section id="sobre" className="py-20 bg-[#171717]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Coluna da Esquerda - Texto */}
             <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
                 Especialistas en Sillas Profesionales
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-white leading-relaxed">
                 Con más de 10 años de experiencia, somos referencia en la reforma de sillas para barberías y salones de belleza. 
                 Entendemos las necesidades específicas de su negocio.
               </p>
@@ -25,25 +25,25 @@ function Sobre() {
                   <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
                     <span className="text-white text-sm">✓</span>
                   </div>
-                  <span className="text-gray-700">Técnicos especializados en equipos de belleza</span>
+                  <span className="text-white">Técnicos especializados en equipos de belleza</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
                     <span className="text-white text-sm">✓</span>
                   </div>
-                  <span className="text-gray-700">Materiales profesionales de alta durabilidad</span>
+                  <span className="text-white">Materiales profesionales de alta durabilidad</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
                     <span className="text-white text-sm">✓</span>
                   </div>
-                  <span className="text-gray-700">Garantía de 6 meses en todos los servicios</span>
+                  <span className="text-white">Garantía de 6 meses en todos los servicios</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
                     <span className="text-white text-sm">✓</span>
                   </div>
-                  <span className="text-gray-700">Recogida y entrega por solo 20,00 euros en Valencia</span>
+                  <span className="text-white">Recogida y entrega por solo 20,00 euros en Valencia</span>
                 </div>
               </div>
 

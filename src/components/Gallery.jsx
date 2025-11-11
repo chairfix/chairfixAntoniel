@@ -38,7 +38,7 @@ export default function Gallery() {
   };
 
   return (
-    <div className="text-center py-10 bg-gray-900 text-white">
+    <div className="text-center py-10 bg-[#171717] text-white">
       {/* Título principal */}
       <h2 className="text-3xl font-bold mb-2">Galería de Trabajos</h2>
       <p className="mb-8 text-gray-300">
