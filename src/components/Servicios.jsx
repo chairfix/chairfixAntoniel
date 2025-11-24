@@ -103,7 +103,7 @@ function Servicios() {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className=" border-2 border-secondary bg-white cursor-pointer  text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 text-lg font-semibold rounded-lg shadow-lg transform transition-all hover:scale-105"
+                  className=" border-2 border-secondary bg-blue-600 cursor-pointer  text-white hover:bg-blue-600 hover:text-white px-8 py-3 text-lg font-semibold rounded-lg shadow-lg transform transition-all hover:scale-105"
                   onClick={() => navigate('/auth?type=client')}
                 >
                   📝 Registrarse y Programar
