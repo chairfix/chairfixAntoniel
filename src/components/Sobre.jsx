@@ -87,7 +87,7 @@ function Sobre() {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 text-lg font-semibold rounded-lg shadow-lg transform transition-all hover:scale-105"
+                  className="border-2 bg-white cursor-pointer border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 text-lg font-semibold rounded-lg shadow-lg transform transition-all hover:scale-105"
                   onClick={() => window.open('https://instagram.com/chairfix', '_blank')}
                 >
                   📸 Ver Trabajos en Instagram

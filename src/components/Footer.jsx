@@ -11,13 +11,13 @@ function Footer() {
           
           {/* Logo */}
           <div className="flex justify-center md:justify-start w-full md:w-auto">
-            <img
-              src="/logoc.png"
-              alt="Logo de la empresa"
-              width={120}
-              height={120}
-              className="w-24 h-24 md:w-32 md:h-32 object-contain"
-            />
+            <Image
+  src="/logoc.png"
+  alt="Logo de la empresa"
+  width={120}
+  height={120}
+   className="w-24 h-24 md:w-32 md:h-32 object-contain"
+/>
           </div>
 
           {/* Texto descriptivo */}

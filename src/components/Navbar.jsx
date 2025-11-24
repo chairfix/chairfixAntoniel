@@ -5,6 +5,7 @@ import { UserCircle, MessageCircle, Menu, X } from "lucide-react";
 import AuthModal from "./AuthModal.jsx";
 import Modal from "./Modal.jsx";
 import Presupuesto from "./Presupuesto.jsx";
+import SearchPresupuesto from "./SearchPresupuseto.jsx";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -75,7 +76,7 @@ function Navbar() {
               className="cursor-pointer  bg-gradient-to-r from-red-600 to-red-700 text-white border-0 hover:from-red-700 hover:to-red-800 shadow-lg"
             >
               <UserCircle className="mr-2 h-4 w-4" />
-              <span>Registro/Acceso</span>
+              <span>Ver Status</span>
             </Button>
             <Button
           
@@ -132,7 +133,7 @@ function Navbar() {
                 className="bg-gradient-to-r from-red-600 to-red-700 text-white border-0 hover:from-red-700 hover:to-red-800 shadow"
               >
                 <UserCircle className="mr-2 h-4 w-4" />
-                Entrar
+                Ver Status
               </Button>
               <Button
                 variant="secondary"
@@ -154,7 +155,7 @@ function Navbar() {
       </div>
     </header>
      {/* Modal de autenticación */}
-      <AuthModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+      <SearchPresupuesto isOpen={modalOpen} onClose={() => setModalOpen(false)} />
         </>
   );
 }

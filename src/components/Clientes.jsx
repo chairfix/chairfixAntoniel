@@ -118,7 +118,7 @@ function Clientes() {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 hover:bg-blue-700 hover:text-white px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold rounded-lg shadow-lg transform transition-all hover:scale-105"
+              className="w-full sm:w-auto border-2 bg-white cursor-pointer border-blue-600 text-blue-600 hover:bg-blue-700 hover:text-white px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold rounded-lg shadow-lg transform transition-all hover:scale-105"
                 onClick={() => window.location.href = '/auth?type=client'}
               >
                 📋 Registrarse y Hacer Seguimiento

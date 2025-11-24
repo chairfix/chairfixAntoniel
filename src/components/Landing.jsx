@@ -42,7 +42,7 @@ function Landing() {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-700 hover:text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-lg shadow-lg transform transition-all hover:scale-105 w-full sm:w-auto"
+                  className="border-2 bg-white cursor-pointer border-blue-600 text-blue-600 hover:bg-blue-700 hover:text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-lg shadow-lg transform transition-all hover:scale-105 w-full sm:w-auto"
                   onClick={() => window.open('https://wa.me/34685572880?text=¡Hola! Me gustaría un presupuesto gratis para reforma de sillas de ChairFix. ¿Puede ayudarme?', '_blank')}
                 >
                   💬 WhatsApp Gratis
