@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import logo from '../assets/logoc.png'
+
 
 function Footer() {
   return (
@@ -13,7 +13,7 @@ function Footer() {
           {/* Logo */}
           <div className="flex justify-center md:justify-start w-full md:w-auto">
             <Image
-  src={logo}
+  src="/Logoc.png"
   alt="Logo de la empresa"
   width={120}
   height={120}
