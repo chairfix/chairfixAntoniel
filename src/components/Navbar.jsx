@@ -139,17 +139,14 @@ function Navbar() {
               </nav>
 
               <div className="flex flex-col sm:hidden space-y-2 mt-2">
-                <Modal />
+                {/* <Modal /> */}
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={() => setModalOpen(true)}
                   className="bg-gradient-to-r from-red-600 to-red-700 text-white border-0 hover:from-red-700 hover:to-red-800 shadow"
                 >
-                  <UserCircle
-                    className="mr-2 h-4 w-4"
-                    style={{ fontWeight: "700", fontSize: "1.2rem" }}
-                  />
+                  
                   Ver Status
                 </Button>
 
@@ -162,7 +159,7 @@ function Navbar() {
                       "_blank"
                     )
                   }
-                  className="shadow"
+                  className="shadow bg-blue-600 text-white"
                 >
                   <MessageCircle
                     className="mr-2 h-4 w-4"
