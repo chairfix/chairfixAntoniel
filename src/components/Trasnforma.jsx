@@ -28,8 +28,11 @@ function Trasnforma() {
               )
             }
           >
-            <MessageCircle className="mr-2 h-5 w-5" />
-            <span className="hidden sm:inline text-white">
+            <MessageCircle 
+            className="mr-2 h-5 w-5" 
+            />
+            <span 
+            className="hidden sm:inline text-white font-bold">
               Presupuesto Gratuito vía WhatsApp
             </span>
             <span className="sm:hidden text-white">Presupuesto WhatsApp</span>
@@ -42,7 +45,7 @@ function Trasnforma() {
             onClick={() => window.open("tel:+34685572880", "_self")}
           >
             <Smartphone className="mr-2 h-5 w-5 " />
-            <span className="hidden sm:inline">
+            <span className="hidden sm:inline font-bold">
               Llama Ahora: +34 685 572 880
             </span>
             <span className="sm:hidden">Llamar</span>
