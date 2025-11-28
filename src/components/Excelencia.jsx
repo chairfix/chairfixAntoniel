@@ -135,11 +135,11 @@ function Excelencia() {
         </div>
 
         {/* CTA no meio da página */}
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <div className="bg-gray-200/30 rounded-xl p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold mb-4 text-white">
               ¡Regístrese y tenga ventajas exclusivas!
-            </h3>
+            </h3> */}
             {/* <div className="text-sm text-black mb-6 space-y-2">
               <div>
                 <CircleCheckBig className="h-5 w-5 text-green-600" /> Descuento
@@ -158,7 +158,7 @@ function Excelencia() {
                 prioritaria
               </div>
             </div> */}
-            <div className="text-sm text-black  mb-6 space-y-2">
+            {/* <div className="text-sm text-black  mb-6 space-y-2">
   <div className="flex justify-center gap-2">
     <CircleCheckBig className="h-5 w-5 text-green-600 mt-0.5" />
     <span className="text-white">Descuento del 10% en el primer servicio</span>
@@ -175,9 +175,9 @@ function Excelencia() {
     <CircleCheckBig className="h-5 w-5 text-green-600 mt-0.5" />
     <span className="text-white">Atención prioritaria</span>
   </div>
-</div>
+</div> */}
 
-            <Button
+            {/* <Button
               size="lg"
               onClick={() => navigate("/auth?type=client")}
               className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-3 text-lg font-semibold rounded-lg shadow-lg transform transition-all hover:scale-105"
@@ -186,7 +186,7 @@ function Excelencia() {
               Crear Mi Cuenta 
             </Button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
