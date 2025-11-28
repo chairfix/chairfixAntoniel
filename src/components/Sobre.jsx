@@ -69,11 +69,11 @@ function Sobre() {
 
           {/* CTA na Seção Sobre */}
           <div className="text-center mt-12">
-            <div className="bg-gray-100 rounded-2xl p-8 max-w-3xl mx-auto">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <div className="bg-gray-200/30  rounded-2xl p-8 max-w-3xl mx-auto">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 🏆 Elija la Experiencia de 10+ Años
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-white mb-6">
                 Únase a los miles de clientes satisfechos. ¡Garantía de 6 meses y recogida/entrega incluida en Valencia!
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
